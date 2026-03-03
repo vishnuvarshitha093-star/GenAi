@@ -1,0 +1,8 @@
+{
+  "info": {"name": "Workplace Requests API", "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"},
+  "item": [
+    {"name": "Login", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "url": "{{baseUrl}}/api/v1/auth/login", "body": {"mode": "raw", "raw": "{\n  \"email\": \"user@corp.com\",\n  \"password\": \"Secret123!\"\n}"}}},
+    {"name": "Create Request", "request": {"method": "POST", "header": [{"key": "Authorization", "value": "Bearer {{token}}"}, {"key": "Content-Type", "value": "application/json"}], "url": "{{baseUrl}}/api/v1/requests", "body": {"mode": "raw", "raw": "{\n  \"title\": \"Need VPN Access\",\n  \"description\": \"Access for project deployment\",\n  \"category\": \"system_access\"\n}"}}}
+  ],
+  "variable": [{"key": "baseUrl", "value": "http://localhost:8000"}, {"key": "token", "value": ""}]
+}

@@ -1,0 +1,9 @@
+<!doctype html><html><body>
+<h1>Architecture Document</h1>
+<h2>Layered Pattern</h2>
+<p>Controller (FastAPI Router) → Service (business rules) → Repository (DB operations) → PostgreSQL.</p>
+<h2>Components</h2>
+<ul><li>API Gateway (FastAPI + Uvicorn)</li><li>Auth Component (JWT token issue + RBAC dependencies)</li><li>Request Management Component (state machine + SLA)</li><li>Audit Component</li><li>Export Component (PDF, CSV, Excel)</li><li>React Main UI</li><li>AI Agent UI (Streamlit)</li></ul>
+<h2>Sequence</h2>
+<p>User authenticates, raises request, approver transitions status, fulfillment and closure recorded, exports generated on demand.</p>
+</body></html>

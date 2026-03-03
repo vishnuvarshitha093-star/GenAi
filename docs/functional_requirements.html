@@ -1,0 +1,9 @@
+<!doctype html><html><body>
+<h1>Functional Requirements Document</h1>
+<h2>Scope</h2><p>Workplace Access & Resource Request Management covering system access, equipment, and facilities.</p>
+<h2>Actors</h2><ul><li>User</li><li>Approver</li><li>Admin</li></ul>
+<h2>Lifecycle</h2><p>Submitted → Under Review → Approved/Rejected → Fulfilled → Closed.</p>
+<h2>Business Rules</h2><ul><li>Edit only when Submitted.</li><li>Fulfill only when Approved.</li><li>Close only when Fulfilled.</li><li>Closed read-only.</li><li>SLA due date auto-calculated by category.</li><li>Audit logging mandatory for all CUD and status transitions.</li></ul>
+<h2>Non-Functional</h2><ul><li>JWT auth with RBAC.</li><li>PostgreSQL + SQLAlchemy + Alembic.</li><li>Export to PDF/CSV/Excel.</li></ul>
+<h2>AI Enablement</h2><ol><li>Requirements refinement with prompt templates and acceptance criteria generation.</li><li>Architecture generation with component drafts.</li><li>Schema validation against OpenAPI and business rules.</li><li>Code scaffolding via AI-assisted templates.</li><li>Test case generation from state model.</li><li>API contract linting versus openapi.yaml.</li><li>HTML doc generation from markdown specs.</li><li>Code quality checker AI agent in Streamlit + LangChain.</li></ol>
+</body></html>
