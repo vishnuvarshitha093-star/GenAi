@@ -1,0 +1,9 @@
+RequirementID,Requirement,SwaggerPath,ServiceMethod,TestCaseID,Status
+REQ-001,User login,/api/v1/auth/login,AuthService.login,TC-001,Implemented
+REQ-002,Create request with SLA,/api/v1/requests,RequestService.create,TC-001,Implemented
+REQ-003,Edit only in Submitted,/api/v1/requests/{request_id},RequestService.update_submitted,TC-003,Implemented
+REQ-004,State transition rules,/api/v1/requests/{request_id}/status,RequestService.transition_status,TC-004|TC-005|TC-006,Implemented
+REQ-005,Audit log mandatory,N/A,AuditService.capture,TC-009,Implemented
+REQ-006,PDF export,/api/v1/requests/exports/pdf,export_requests_pdf,TC-007,Implemented
+REQ-007,Excel export,/api/v1/requests/exports/excel,export_requests_excel,TC-008,Implemented
+REQ-008,CSV export,/api/v1/requests/exports/csv,export_requests_csv,TC-008,Implemented

@@ -1,0 +1,9 @@
+<!doctype html><html><body>
+<h1>Database Design</h1>
+<h2>Logical Model</h2>
+<ul><li>User(1) to ResourceRequest(M) by requested_by_id.</li><li>User(1) to ResourceRequest(M) by approver_id.</li><li>ResourceRequest(1) to AuditLog(M) via entity_id + entity_type.</li></ul>
+<h2>Physical Model</h2>
+<p>PostgreSQL tables: users, resource_requests, audit_logs. Enums for role and status.</p>
+<h2>ER Diagram Explanation</h2>
+<p>Users own requests; approvers act on workflow; audit logs capture immutable action history for compliance.</p>
+</body></html>

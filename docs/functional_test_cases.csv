@@ -1,0 +1,10 @@
+TestCaseID,Scenario,Precondition,Steps,ExpectedResult,Priority
+TC-001,Create request,Valid JWT as User,POST /requests with payload,Request created in Submitted with SLA due date,High
+TC-002,Edit submitted request,Request in Submitted,PATCH /requests/{id},Update success,High
+TC-003,Edit non-submitted request,Request in Under Review,PATCH /requests/{id},400 validation error,High
+TC-004,Approve request,Approver token + Under Review,POST /requests/{id}/status Approved,Status updated to Approved,High
+TC-005,Fulfill without approval,Approver token + Submitted,POST status Fulfilled,400 error only approved can be fulfilled,High
+TC-006,Close fulfilled request,Approver token + Fulfilled,POST status Closed,Status updated Closed read-only,High
+TC-007,Export PDF,JWT token,GET /requests/exports/pdf,PDF generated,Medium
+TC-008,Export Excel,JWT token,GET /requests/exports/excel,XLSX generated,Medium
+TC-009,Audit logging on transition,Status change occurs,Query audit_logs,Audit row persisted,High
